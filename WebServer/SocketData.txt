@@ -1,0 +1,14 @@
+Daten die von dem socket genutzt werden
+
+für das sichtbare Licht:
+	vON
+	vOFF
+
+für das infrared Licht:
+	iON
+	iOFF
+
+für den Controller:
+	cON
+	cOFF
+	cLOW

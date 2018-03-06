@@ -1,0 +1,38 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          Azubot control and camera stream
+# Required-Start:    $remote_fs $syslog network bluetooth
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start Azubot control and camera stream
+# Description:       Azubot control and camera stream
+### END INIT INFO
+
+case "$1" in
+start)
+	sudo ds4drv > /home/pi/Azubot/controllerlog.log &
+	while [ -e /dev/input/js0 ]
+	do
+       	echo "Device could not be created"
+	done
+	echo "Connect your Controller"
+	sudo python3 /home/pi/Azubot/WebServer/app.py >> /home/pi/Azubot/azubot.log &
+	sudo python3 /home/pi/Azubot/Control/main.py >> /home/pi/Azubot/azubot.log &
+
+    ;;
+
+stop)
+    sudo pkill -9 python3
+    sudo pkill ds4drv
+
+	;;
+
+*)
+        echo "Usage: /etc/init.d/azubot {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
+
