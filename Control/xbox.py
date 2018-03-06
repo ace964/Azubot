@@ -47,12 +47,12 @@ class xboxController(IController):
         
         self.buttonToAction[self.buttonLB] = "inverseLeftSpeed"
         self.buttonToAction[self.buttonRB] = "inverseRightSpeed"
-        self.buttonToAction[self.buttonA] = "playHupe"
-        self.buttonToAction[self.buttonB] = "playCantinaBand"
+        self.buttonToAction[self.buttonA] = None
+        self.buttonToAction[self.buttonB] = None
         self.buttonToAction[self.buttonX] = "toggleLightInfrared"
         self.buttonToAction[self.buttonY] = "toggleLightVisible"
-        self.buttonToAction[self.buttonStart] = "playBootup"
-        self.buttonToAction[self.buttonBack] = "playEngineStart"
+        self.buttonToAction[self.buttonStart] = None
+        self.buttonToAction[self.buttonBack] = None
         self.buttonToAction[self.buttonPS] = None
         self.buttonToAction[self.buttonLStick] = None
         self.buttonToAction[self.buttonRStick] = None
