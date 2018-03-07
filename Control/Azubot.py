@@ -282,6 +282,8 @@ class AzubotController(IAzubot):
     def playSound(self, filename): # plays sound in /home/pi/sounds/ + filename
         self.SOUND_PLAYER.play(filename)
     
+    def playDemo(self):
+        self.SOUND_PLAYER.play("demo.mp3")
     # Send data to webserver via socket connection.
     def sendData(self, data):
         if(self.conn is not None):

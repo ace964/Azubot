@@ -49,7 +49,7 @@ class PS4Controller(IController):
         
         self.buttonToAction[self.buttonLB] = "inverseLeftSpeed"
         self.buttonToAction[self.buttonRB] = "inverseRightSpeed"
-        self.buttonToAction[self.buttonA] = None
+        self.buttonToAction[self.buttonA] = "playDemo"
         self.buttonToAction[self.buttonB] = None
         self.buttonToAction[self.buttonX] = "toggleLightInfrared"
         self.buttonToAction[self.buttonY] = "toggleLightVisible"

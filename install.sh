@@ -20,6 +20,8 @@ if ask; then
 		echo "INSTALLING"
 		echo "Creating sounds directory in /home/pi/sounds"
 		mkdir /home/pi/sounds
+        echo "adding demo sound"
+        sudo cp /home/pi/Azubot/demo.mp3 /home/pi/sounds/demo.mp3
 		echo "creating service in /etc/init.d/azubot"
 		sudo cp azubot /etc/init.d/azubot
 		sudo chmod +x /etc/init.d/azubot
