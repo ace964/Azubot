@@ -4,7 +4,7 @@ import subprocess
 import re
 import time
 
-pins = pigpio.pi(port=8887)
+pins = pigpio.pi(port=8888)
 
 class PeriodicProducer(threading.Thread):
 

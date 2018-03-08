@@ -1,13 +1,13 @@
-from azubot.IPin import IPin
-from azubot.IServo import IServo
-from azubot.IPwm import IPwm
-from azubot.IAzubot import IAzubot
+from IPin import IPin
+from IServo import IServo
+from IPwm import IPwm
+from IAzubot import IAzubot
 import time
 from pygame import mixer # Load sound library
 import pigpio
 
 # Initialize connection to local pigpio server
-pi=pigpio.pi(port=8887)
+pi=pigpio.pi(port=8888)
 
 # Create Custom Error for hardware interaction
 class AccessError(Exception):
